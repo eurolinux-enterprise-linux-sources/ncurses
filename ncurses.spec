@@ -1,7 +1,7 @@
 Summary: Ncurses support utilities
 Name: ncurses
 Version: 5.9
-Release: 13.20130511%{?dist}
+Release: 14.20130511%{?dist}
 License: MIT
 Group: System Environment/Base
 URL: http://invisible-island.net/ncurses/ncurses.html
@@ -15,6 +15,7 @@ Patch9: ncurses-libs.patch
 Patch10: ncurses-clear.patch
 Patch11: ncurses-urxvt.patch
 Patch12: ncurses-kbs.patch
+Patch13: ncurses-setup.patch
 BuildRequires: gpm-devel pkgconfig
 
 Requires: %{name}-libs%{?_isa} = %{version}-%{release}
@@ -106,6 +107,7 @@ The ncurses-static package includes static libraries of the ncurses library.
 %patch10 -p1
 %patch11 -p1 -b .urxvt
 %patch12 -p1 -b .kbs
+%patch13 -p1 -b .setup
 
 # this will be in documentation, drop executable bits
 cp -p install-sh test
@@ -247,6 +249,9 @@ bzip2 NEWS
 %{_libdir}/lib*.a
 
 %changelog
+* Tue Aug 15 2017 Miroslav Lichvar <mlichvar@redhat.com> 5.9-14.20130511
+- fix crash in libtinfo initialization (#1426215)
+
 * Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 5.9-13.20130511
 - Mass rebuild 2014-01-24
 
