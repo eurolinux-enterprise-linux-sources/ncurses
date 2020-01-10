@@ -1,7 +1,7 @@
 Summary: Ncurses support utilities
 Name: ncurses
 Version: 5.9
-Release: 11.20130511%{?dist}
+Release: 13.20130511%{?dist}
 License: MIT
 Group: System Environment/Base
 URL: http://invisible-island.net/ncurses/ncurses.html
@@ -247,6 +247,12 @@ bzip2 NEWS
 %{_libdir}/lib*.a
 
 %changelog
+* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 5.9-13.20130511
+- Mass rebuild 2014-01-24
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 5.9-12.20130511
+- Mass rebuild 2013-12-27
+
 * Mon May 13 2013 Miroslav Lichvar <mlichvar@redhat.com> 5.9-11.20130511
 - update to 20130511
 
@@ -462,7 +468,7 @@ bzip2 NEWS
 * Tue Feb 07 2006 Jesse Keating <jkeating@redhat.com> - 5.5-18.1
 - rebuilt for new gcc4.1 snapshot and glibc changes
 
-* Fri Jan 31 2006 Jindrich Novy <jnovy@redhat.com> 5.5-18
+* Tue Jan 31 2006 Jindrich Novy <jnovy@redhat.com> 5.5-18
 - add --with-chtype=long to avoid type clashes on x86_64 (#178824)
 - spec cleanup
 
@@ -522,7 +528,7 @@ bzip2 NEWS
 - update to newest jumbo monthly patch + weeklies, fixing
   new line cursor move problem (#140326)
 
-* Wed Oct 21 2004 Adrian Havill <havill@redhat.com> 5.4-14
+* Thu Oct 21 2004 Adrian Havill <havill@redhat.com> 5.4-14
 - escape rpm macros in the changelog (#135408)
 
 * Tue Aug 31 2004 Adrian Havill <havill@redhat.com> 5.4-13
@@ -540,7 +546,7 @@ bzip2 NEWS
 - add term.sh to /etc/profile.d, reference in /etc/bashrc
 - modify term.sh to support rxvt (#122815 comment 93)
 
-* Fri Jul 08 2004 Adrian Havill <havill@redhat.com> 5.4-10
+* Thu Jul 08 2004 Adrian Havill <havill@redhat.com> 5.4-10
 - add home/end mappings to gnome definition (#122815)
 
 * Tue Jul 06 2004 Adrian Havill <havill@redhat.com> 5.4-9.fc3
@@ -712,7 +718,7 @@ bzip2 NEWS
 - Fix up some terminfo entries containing includes to
   "/var/tmp/ncurses-root/something" (#30771)
 
-* Wed Feb 22 2001 Harald Hoyer <harald@redhat.de>
+* Thu Feb 22 2001 Harald Hoyer <harald@redhat.de>
 - fixed rxvt backspace setting
 
 * Fri Feb  9 2001 Yukihiro Nakai <ynakai@redhat.com>
