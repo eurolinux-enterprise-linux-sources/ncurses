@@ -1,7 +1,7 @@
 Summary: Ncurses support utilities
 Name: ncurses
 Version: 5.7
-Release: 3.20090208%{?dist}
+Release: 4.20090207%{?dist}
 License: MIT
 Group: System Environment/Base
 URL: http://invisible-island.net/ncurses/ncurses.html
@@ -13,6 +13,7 @@ Patch8: ncurses-5.7-20090124-config.patch
 Patch9: ncurses-5.6-20070612-libs.patch
 Patch11: ncurses-5.6-20080112-urxvt.patch
 Patch12: ncurses-5.6-20080628-kbs.patch
+Patch13: ncurses-5.7-20090207-pkgconfig.patch
 BuildRequires: gpm-devel pkgconfig
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
@@ -95,6 +96,7 @@ The ncurses-static package includes static libraries of the ncurses library.
 %patch9 -p1 -b .libs
 %patch11 -p1 -b .urxvt
 %patch12 -p1 -b .kbs
+%patch13 -p1 -b .pkgconfig
 
 # this will be in documentation, drop executable bits
 cp -p install-sh test
@@ -265,6 +267,9 @@ bzip2 NEWS
 rm -rf ${RPM_BUILD_ROOT}
 
 %changelog
+* Thu Feb 19 2015 Miroslav Lichvar <mlichvar@redhat.com> 5.7-4.20090207
+- fix pkg-config files to include tinfo in static linking (#1025744)
+
 * Mon Nov 30 2009 Dennis Gregorovic <dgregor@redhat.com> - 5.7-3.20090208
 - Rebuilt for RHEL 6
 
